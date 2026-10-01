@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Habtamu Portfolio Design System */
+
+@layer base {
+  :root {
+    /* Core Background & Text */
+    --background: 0 0% 100%;
+    --foreground: 220 13% 18%;
+    
+    /* Cards & Surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+    
+    /* Interactive Elements */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+    
+    /* Brand Primary - Deep Professional Blue */
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 221 83% 45%;
+    
+    /* Secondary - Soft Gray */
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 220 13% 18%;
+    
+    /* Muted Elements */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8% 46%;
+    
+    /* Accent - Vibrant Teal */
+    --accent: 180 100% 48%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 180 100% 40%;
+    
+    /* Destructive */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Borders & Inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 83% 53%;
+    
+    /* Professional Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--primary)));
+    
+    /* Elegant Shadows */
+    --shadow-soft: 0 2px 10px -2px hsl(220 13% 18% / 0.1);
+    --shadow-medium: 0 8px 30px -12px hsl(220 13% 18% / 0.25);
+    --shadow-strong: 0 20px 40px -12px hsl(var(--primary) / 0.4);
+    
+    /* Smooth Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bouncy: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode - Sophisticated Dark Palette */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    
+    --card: 224 71% 4%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 221 83% 60%;
+    
+    --secondary: 215 27% 17%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 215 27% 17%;
+    --muted-foreground: 217 10% 65%;
+    
+    --accent: 180 100% 48%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 180 100% 55%;
+    
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 215 27% 17%;
+    --input: 215 27% 17%;
+    --ring: 221 83% 53%;
+    
+    /* Dark Mode Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--primary)));
+    
+    /* Dark Mode Shadows */
+    --shadow-soft: 0 2px 10px -2px hsl(0 0% 0% / 0.4);
+    --shadow-medium: 0 8px 30px -12px hsl(0 0% 0% / 0.6);
+    --shadow-strong: 0 20px 40px -12px hsl(var(--primary) / 0.6);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+}
+
+/* React Logo Animation */
+@keyframes react-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.react-logo {
+  animation: react-spin 20s linear infinite;
+  width: 24px;
+  height: 24px;
+  color: hsl(var(--primary));
+}

@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"app/page.tsx -> @/components/ThreeCanvasBackground\":{\"id\":\"app/page.tsx -> @/components/ThreeCanvasBackground\",\"files\":[\"static/chunks/_app-pages-browser_src_components_ThreeCanvasBackground_tsx.js\"]}}"
